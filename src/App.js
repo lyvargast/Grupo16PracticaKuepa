@@ -1,25 +1,67 @@
-import logo from './logo.svg';
-import './App.css';
+
+import React from "react";
+import Inicio from './pages/Inicio/inicio';
+import SelecMesa from './pages/SelecMesa/selecmesa';
+import Menu from './pages/Menu/menu';
+import Productos from './pages/Productos/productos';
+import HistorialPedidos from './pages/HistorialPedidos/historialpedidos';
+import EditarMenu from './pages/EditarMenu/editarmenu';
+import Configuracion from './pages/Configuracion/configuracion';
+import Perfil from './pages/Perfil/perfil';
+import Error404 from './pages/Error404/error404';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    
+    <Router basename={process.env.PUBLIC_URL}>         
+      
+        <Switch>
+              <Route exact path="/Inicio">
+                <Inicio />
+              </Route>
+              <Route exact path="/">
+                <Inicio />
+              </Route>
+              <Route exact path="/seleccionarmesa">
+                <SelecMesa />
+              </Route>
+              <Route exact path="/menu">
+                <Menu />
+              </Route>
+              <Route exact path="/productos">
+                <Productos />
+              </Route>
+              <Route exact path="/historialpedido">
+                <HistorialPedidos />
+              </Route>
+              <Route exact path="/editarmenu">
+                <EditarMenu />
+              </Route>
+              <Route exact path="/configuracion">
+                <Configuracion />
+              </Route>
+              <Route exact path="/perfil">
+                <Perfil />
+              </Route>
+              <Route exact path="*">
+                <Error404 />
+              </Route>
+        </Switch>
+    </Router>
     </div>
+    
   );
 }
-
 export default App;
+
+
+
+
+
