@@ -1,0 +1,107 @@
+
+.logoinicio img {
+    border-radius: 5px; 
+}
+
+.logoinicio{
+    display: flex;
+    justify-content: space-around;
+    align-self:center;
+    margin: 50px auto;
+}
+
+.caja {
+    margin: 50px auto;
+    width:22rem;
+    display: flex;
+    background-color: #451A11;
+}
+
+.tituloingreso{
+    color: #F2DDBA;
+    text-shadow: 2px 2px 2px #EC6E21;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+.dropdowncolor{
+    background-color: #F2DDBA;
+    width: 20rem;
+    color:#221F1f;
+    font-weight: bold;
+}
+
+.dropdowncolor i{
+    color: #EC6E21;
+    font-size: 25px;
+}
+
+
+.dropdowncolor:hover{
+ background-color: #F2DDBA;
+ color: #221F1f;
+}
+
+.dropdowncolor:visited{
+    background-color: #F2DDBA;
+}
+
+.dropdowncolor:checked{
+    background-color: #F2DDBA;
+}
+
+.itemdropdown{
+    background-color: #F2DDBA;
+    width: 20rem;
+}
+
+.itemdropdown:hover{
+    background-color: #EC6E21;
+}
+
+.btn-check:active+.btn-secondary, .btn-check:checked+.btn-secondary, .btn-secondary.active, .btn-secondary:active, .show>.btn-secondary.dropdown-toggle {
+    color: #221F1f;
+    background-color: #F2DDBA;
+    
+}
+
+.fondodrop{
+    background-color: #F2DDBA;
+}
+
+.dropdown-menu {
+    min-width: none;
+}
+
+.usuarioinput span{
+    background-color: #F2DDBA;    
+}
+
+.usuarioinput i{
+    color: #EC6E21;
+    font-size: 25px;
+}
+.usuarioinput input{
+background-color: #F2DDBA;
+font-weight: bold;
+color: #221F1f;
+}
+.usuarioinput input:focus{
+    background-color: #F2DDBA;
+    box-shadow: 0px 0px 0px #F2DDBA;
+    border:#F2DDBA
+}
+
+.botoningresar button{
+    background-color: #EC6E21;
+    border:#EC6E21;
+    color: #F2DDBA;
+    font-weight: bold;
+}
+
+.botoningresar:hover button{
+    background-color: #73574b;
+    color: #F2DDBA;
+}
+
