@@ -1,0 +1,30 @@
+.tituloconfi{
+    color: #451A11;
+    text-shadow:  2px 3px  #ec6e21;
+	letter-spacing: 2px;
+}
+
+
+
+.opcionconfi{
+    background-color: #B8977E;
+    color: #F2DDBA;
+    display: grid;
+    grid-template-columns: 90% 10%;
+    width:100vw; 
+}
+
+.opcionconfi i{
+    color: #ec6e21;
+    font-size: 50px;
+    
+}
+
+
+
+@media screen and (min-width:425px){
+    .letrafooter p {
+      margin-right: 20px;  
+    }
+}
+

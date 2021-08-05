@@ -1,3 +1,10 @@
+.fondoinicio {
+    background-image: url(./fondoinicio.jpg);
+    size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
 
 .logoinicio img {
     border-radius: 5px; 
@@ -7,7 +14,8 @@
     display: flex;
     justify-content: space-around;
     align-self:center;
-    margin: 50px auto;
+    margin:0px auto 50px auto;
+    padding-top:30px ;
 }
 
 .caja {
@@ -15,6 +23,7 @@
     width:22rem;
     display: flex;
     background-color: #451A11;
+    margin-bottom: 50px;
 }
 
 .tituloingreso{
@@ -30,6 +39,7 @@
     width: 20rem;
     color:#221F1f;
     font-weight: bold;
+    text-align: left;
 }
 
 .dropdowncolor i{
@@ -49,6 +59,10 @@
 
 .dropdowncolor:checked{
     background-color: #F2DDBA;
+}
+
+.dropdowncolor i{
+text-align: left;
 }
 
 .itemdropdown{
@@ -103,5 +117,9 @@ color: #221F1f;
 .botoningresar:hover button{
     background-color: #73574b;
     color: #F2DDBA;
+}
+
+.claseiconociu{
+    text-align: left;
 }
 
