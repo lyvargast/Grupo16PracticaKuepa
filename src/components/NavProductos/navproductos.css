@@ -1,0 +1,21 @@
+.navbar1{
+background-color: #451A11;
+	font-size: 12pt;
+}
+
+.fixed-top{
+	position:static;
+}
+
+
+.nav-link{
+    color: #f2ddba;
+}
+
+
+.nav-link:hover{
+	color: #ec6e21;
+}
+
+
+
