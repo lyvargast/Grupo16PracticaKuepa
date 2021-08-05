@@ -13,20 +13,22 @@ function Inicio(){
 		setDropdown1(!dropdown1);
 	}
 	return(
-	<div className="container">
+	<body className="fondoinicio">	
+	<div className="container-fluid ">
 		
 					<div className="logoinicio">
 					<img src={logoininicio} width='350px' />
 					</div>
 			<div className="card caja "> 
 				<div className="card-body">
-					<h4 className="tituloingreso">INGRESO ADMINISTRADOR</h4>
+					<h4 className="tituloingreso" >INGRESO ADMINISTRADOR</h4>
 					<div className="mb-2">
+
 							<Dropdown isOpen={dropdown} toggle={abrirCerrarDropdown} className="dropprincipal">
-							<DropdownToggle caret className="dropdowncolor ">
-							<i class="fas fa-map-marker-alt"></i> CIUDAD
+							<DropdownToggle caret className="dropdowncolor">
+							<i className="fas fa-map-marker-alt claseiconociu"></i> CIUDAD 
 							</DropdownToggle>
-							<DropdownMenu className="fondodrop">
+							<DropdownMenu left className="fondodrop">
 								<DropdownItem className="itemdropdown">Bogotá</DropdownItem>
 								<DropdownItem className="itemdropdown">Medellín </DropdownItem>
 								<DropdownItem className="itemdropdown">Cali</DropdownItem>
@@ -67,9 +69,10 @@ function Inicio(){
 						<button class="btn btn-primary" type="button">INGRESAR</button>
 					</div>       
 				</div>
-			</div>	
+			</div>
+		
  </div>
-  
+ </body>
    );
   }
    export default Inicio;

@@ -1,0 +1,15 @@
+.footercolor{
+    background-color: #ec6e21 ;
+    color: #f2dbba;
+}
+
+.footerabajo{
+position: absolute;
+bottom: 0;
+}
+
+@media screen and (max-width:768px){
+  .footerabajo{
+  position: static;
+  }
+}
