@@ -1,4 +1,3 @@
-
 import React from "react";
 import Inicio from './pages/Inicio/inicio';
 import SelecMesa from './pages/SelecMesa/selecmesa';
@@ -9,12 +8,19 @@ import EditarMenu from './pages/EditarMenu/editarmenu';
 import Configuracion from './pages/Configuracion/configuracion';
 import Perfil from './pages/Perfil/perfil';
 import Error404 from './pages/Error404/error404';
+import CarritoCompras from "./components/CarritoCompras/carritocompras";
+import NavBar from "./components/NavBar/navbar";
+
+import Res from '../src/components/BodyProductos/res/res'
+
+
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
+
 
 function App() {
   return (
@@ -50,6 +56,38 @@ function App() {
               <Route exact path="/perfil">
                 <Perfil />
               </Route>
+
+              <Route exact path="/menu/:categoria">
+                <Res />
+              </Route>
+              <Route exact path="/carrito">
+                <CarritoCompras />
+              </Route>
+
+              <Router>
+                <Route exact path="/navbar">
+                  <NavBar />
+                 </Route>
+                <Switch>
+                  <Route exact path="/tomarpedido">
+                    <SelecMesa />
+                  </Route>
+                  <Route exact path="/todaslasordenes">
+                    <HistorialPedidos />
+                  </Route>
+                  <Route exact path="/editarmenu">
+                    <CarritoCompras />
+                  </Route>
+                  <Route exact path="/configuracion">
+                    <Configuracion />
+                  </Route>
+                  
+                </Switch>
+              </Router>
+
+
+
+
               <Route exact path="*">
                 <Error404 />
               </Route>
