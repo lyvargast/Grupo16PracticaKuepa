@@ -2,7 +2,7 @@ import './inicio.css'
 import React, {useState} from "react"
 import logoininicio from "./logoinicio.PNG"
 import { Dropdown,DropdownItem,DropdownMenu, DropdownToggle } from 'reactstrap'
-
+import {Formulario} from "./Formulario";
 function Inicio(){ 
 	const [dropdown, setDropdown]=useState(false);
 	const abrirCerrarDropdown=()=>{
@@ -12,6 +12,12 @@ function Inicio(){
 	const abrirCerrarDropdown1=()=>{
 		setDropdown1(!dropdown1);
 	}
+    
+    const[datos, setDatos]= useState({
+	})
+
+	
+
 	return(
 	<body className="fondoinicio">	
 	<div className="container-fluid ">
@@ -66,7 +72,7 @@ function Inicio(){
 						<input type="password" className="form-control" placeholder="CONTRASEÑA"  aria-describedby="basic-addon1" />
                     </div> 
 					<div class="d-grid gap-3 col-12 mx-auto botoningresar">
-						<button class="btn btn-primary" type="button">INGRESAR</button>
+						<button class="btn btn-primary" type="submit">INGRESAR</button>
 					</div>       
 				</div>
 			</div>

@@ -1,4 +1,3 @@
-
 import React from "react";
 import Inicio from './pages/Inicio/inicio';
 import SelecMesa from './pages/SelecMesa/selecmesa';
@@ -9,12 +8,14 @@ import EditarMenu from './pages/EditarMenu/editarmenu';
 import Configuracion from './pages/Configuracion/configuracion';
 import Perfil from './pages/Perfil/perfil';
 import Error404 from './pages/Error404/error404';
+import View from "./components/ModalAnadirProducto/view";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
+
 
 function App() {
   return (
@@ -49,6 +50,9 @@ function App() {
               </Route>
               <Route exact path="/perfil">
                 <Perfil />
+              </Route>
+              <Route exact path="/view/:id" component={View}>
+                <View />
               </Route>
               <Route exact path="*">
                 <Error404 />
