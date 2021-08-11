@@ -25,8 +25,9 @@ import {
 function App() {
   return (
     <div>
-    
-    <Router basename={process.env.PUBLIC_URL}>         
+
+    <Router basename={process.env.PUBLIC_URL}> 
+      <NavBar />        
       
         <Switch>
               <Route exact path="/Inicio">
@@ -64,26 +65,7 @@ function App() {
                 <CarritoCompras />
               </Route>
 
-              <Router>
-                <Route exact path="/navbar">
-                  <NavBar />
-                 </Route>
-                <Switch>
-                  <Route exact path="/tomarpedido">
-                    <SelecMesa />
-                  </Route>
-                  <Route exact path="/todaslasordenes">
-                    <HistorialPedidos />
-                  </Route>
-                  <Route exact path="/editarmenu">
-                    <CarritoCompras />
-                  </Route>
-                  <Route exact path="/configuracion">
-                    <Configuracion />
-                  </Route>
-                  
-                </Switch>
-              </Router>
+             
 
 
 

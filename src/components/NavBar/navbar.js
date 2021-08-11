@@ -23,9 +23,9 @@ function NavBar(){
                    <nav className={sidebar ? 'nav-menu-active' : 'nav-menu'}>
                         <ul className='nav-menu-items'>
                             <li className="navbar-toggle ">
-                                <link to="#" className="menu-bars">
+                                <Link to="#" className="menu-bars">
                                 <img src={equis}/>
-                                </link>
+                                </Link>
 
                             </li>
                             {SidebarData.map((item, index) => {
