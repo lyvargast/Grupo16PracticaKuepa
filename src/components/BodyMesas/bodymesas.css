@@ -1,0 +1,31 @@
+
+.fondobodymesas{
+    background-image: url("./wood.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+.table{
+    width: 120px;
+}
+.titulo{
+    top: 20px;
+}
+
+.cajasmesas{
+    margin:auto;
+    margin-top: 30px;
+}
+/*.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 20px;
+  }*/
+  .fotoplanta{
+      max-width: 80px;
+      width: 100%;
+      max-height: 80px;
+      height: 100%;
+  }
+ 

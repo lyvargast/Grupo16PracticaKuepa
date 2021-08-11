@@ -1,0 +1,88 @@
+.fondoproductos{
+    background-image: url(../piedra.jpg);
+    background-size: cover;
+
+
+}
+.letraproductos h1{
+	color: #f2ddba; /*BEIGE*/
+	text-shadow:  2px 3px  #ec6e21;
+	letter-spacing: 2px;
+    font-size: 80px;
+
+}
+.tarjetares{
+    min-width:270px;
+    width: 100%;
+    min-height:270px;
+    height:100%;
+    border: none;
+    margin: 0px 0px 150px 0px;
+    background-color: transparent;
+  
+    
+    
+    
+}
+.partearribacard{
+    max-width:200px;
+    width: 100%;
+    text-align: center;
+    z-index: 1999;
+    position: relative;
+    top:20px;
+    left: 40px;
+   
+}
+
+.cajaproductos{
+    background-color: rgba(115, 87, 75, 0.7);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+.cajaproductos h3{
+    font-family:"western";
+    text-align: center;
+    color: #f2ddba; /*BEIGE*/
+	text-shadow:  2px 3px  #451A11; /*CAFÉ*/
+    font-size: 35px;
+    letter-spacing: 1px;
+
+}
+.cajaproductos p{
+    text-align: center;
+    color: #451A11;
+    font-size: 20px;
+    font-weight: bold;
+	
+}
+.cajabotones{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+.naranja{
+    width: 7rem;
+    background-color: #ec6e21;
+    color: #f2ddba;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 15px;
+    text-align: center;
+
+
+}
+.beige{
+    width: 7rem;
+    background-color: #f2ddba;
+    color: #ec6e21;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 15px;
+    text-align: center;
+}

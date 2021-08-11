@@ -1,0 +1,71 @@
+.primercuadro{
+    background-color: #EC6E21;
+}
+.primercuadro div h4{
+    color: #F2DDBA;
+}
+.fa-power-off{
+    color: #F2DDBA;
+    font-size: 30px;
+}
+.letracerrarsesion{
+    color: #F2DDBA;
+
+}
+.mesacarrito p{
+    color: #B8977E;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+.mesacarrito span{
+    color:#451A11;
+    font-size: 18px;
+    font-weight: bold; 
+
+}
+.iddelaorden p{
+    color:#451A11;
+    font-weight: bold;
+    font-size: 16px;
+
+}
+
+.segundocuadro{
+    background-color: #B8977E;
+    color: #F2DDBA;
+
+}
+.tercercuadro{
+    background-color: white;
+    color: #47525E;
+    font-weight: bold;
+
+}
+hr{
+    border: 2px solid grey;
+
+}
+.cuartocuadro{
+    background-color: #B8977E;
+    color: #47525E;
+    font-weight: bolder;
+
+}
+.quintocuadro{
+    background-color: white;
+
+}
+.quintocuadro div button{
+    margin-top: 10px;
+    width: 8rem;
+}
+.cancelarorden{
+    background-color: #DF421D;
+    color: white;
+    border: 4px solid #df421d;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px;
+}
