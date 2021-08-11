@@ -9,6 +9,12 @@ import Configuracion from './pages/Configuracion/configuracion';
 import Perfil from './pages/Perfil/perfil';
 import Error404 from './pages/Error404/error404';
 import View from "./components/ModalAnadirProducto/view";
+import CarritoCompras from "./components/CarritoCompras/carritocompras";
+import NavBar from "./components/NavBar/navbar";
+
+import Res from '../src/components/BodyProductos/res/res'
+
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -20,8 +26,9 @@ import {
 function App() {
   return (
     <div>
-    
-    <Router basename={process.env.PUBLIC_URL}>         
+
+    <Router basename={process.env.PUBLIC_URL}> 
+      <NavBar />        
       
         <Switch>
               <Route exact path="/Inicio">
@@ -54,6 +61,19 @@ function App() {
               <Route exact path="/view/:id" component={View}>
                 <View />
               </Route>
+
+              <Route exact path="/menu/:categoria">
+                <Res />
+              </Route>
+              <Route exact path="/carrito">
+                <CarritoCompras />
+              </Route>
+
+             
+
+
+
+
               <Route exact path="*">
                 <Error404 />
               </Route>
