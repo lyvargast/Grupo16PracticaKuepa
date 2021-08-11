@@ -1,22 +1,25 @@
 import './modalanadircategoria.css';
 import {useState} from "react";
+
 function ModalAnadirCategoria(){
   
-  const initialStateValues ={
+  const initialStateValues = {
     imgcategoria:'',
     titulocategoria:''
   };
+
   const [ values, setValues] = useState(initialStateValues);
   
-  const handleInputChange = e =>{
-      const {name,value} = e.target;
-    console.log(name,value)
+  const handleInputChange = (e) =>{
+      const {name, value} = e.target;
+      setValues({...values, [name]:value })
+      console.log(name,value)
   };
 
-  const handleSubmit = e =>{
+  const handleSubmit = (e) =>{
     e.preventDefault();
-    console.log(values)
-  }
+    console.log(values);
+  };
 	return(
     <div className="modal fade" id="ModalCategoria" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
        <div className="modal-dialog">
@@ -34,9 +37,9 @@ function ModalAnadirCategoria(){
                         <div class="mb-3">
                             <input 
                                class="form-control" 
+                               name="anadirimg" 
                                type="file" id="formFile" 
                                onChange={handleInputChange}
-                               name="anadirimg" 
                               />
                               <label for="formFile" class="form-label d-flex justify-content-center">
                                 Añadir imagen
@@ -45,12 +48,13 @@ function ModalAnadirCategoria(){
                         <div class="mb-3">
                               < input
                                 type="text"
+                                name="nombrecategoria"
                                 class="form-control" 
                                 placeholder="Inserte el nombre de la categoría" 
                                 id="exampleFormControlTextarea1" 
                                 rows="2"
                                 onChange={handleInputChange}
-                                name="nombrecategoria" 
+                                 
                               />
                               
                         </div>

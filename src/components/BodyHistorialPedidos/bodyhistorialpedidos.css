@@ -1,0 +1,81 @@
+.fondohistorialpedidos{
+    background-color: #f2ddba;
+}
+
+.bannernaranja{
+    background-color: #ec6e21;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.calendario{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+
+.calendario p{
+    color: #f2ddba;
+    font-weight: bold;
+}
+.calendario span{
+    color: #451a11;
+    font-weight: bold;
+}
+.calendario i{
+    color: #f2ddba;   
+}
+.fecha p{
+    color: #451a11;
+
+}
+.ordenes{
+    justify-content: right;
+}
+.ordenes span{
+    color: #451a11;
+
+}
+.ordenes p{
+    color: white;
+}
+.bannerbeige{
+    border-bottom: 2px solid gray;
+
+}
+.bannerbeigeflex{
+    display: flex;
+    flex-direction: row;
+}
+.bannerbeige div p{
+    color: #47525E;
+    font-weight: bold;
+}
+
+
+.anadirproducto{
+    background-color: #451a11;
+    border: 4px solid #451A11;
+    color: #f2ddba;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px;
+}
+.eliminarproducto{
+    background-color: #B8977E;
+    border: 4px solid #B8977E;
+    color: #f2ddba;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
