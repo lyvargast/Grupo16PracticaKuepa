@@ -1,0 +1,18 @@
+.cajaBtn{
+    display: flex;
+    flex-direction: column; 
+    cursor: url(power.png),pointer;
+}
+
+.btn{
+    border: 1px solid #451a11;
+    background-color: #f2ddba;
+    text-align: left;    
+}
+
+.btn a{
+    color: #451a11;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;   
+}

@@ -1,0 +1,17 @@
+.titulomodal h1{
+	color: #451a11; /*CAFÉ*/
+	text-shadow:  2px 3px  #ec6e21;
+	letter-spacing: 2px;
+    font-size: 40px;
+}
+
+.btnanadirprodu2{
+    background-color:  #451A11;
+    border: 4px solid  #ec6e21;
+    color: #f2ddba;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px;
+    width: 7rem;
+}
