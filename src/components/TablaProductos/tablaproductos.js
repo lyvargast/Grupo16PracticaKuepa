@@ -1,10 +1,10 @@
 import './tablaproductos.css';
-import React,{useState, useEffect} from "react";
-import firebaseDb from '../../firebase';
-import {Link, link} from "react-router-dom";
+import React,{useState, useEffect, Component } from "react";
+import {fireDb} from '../../firebase';
+import {Link} from "react-router-dom";
 
 const TablaProductos = () =>{
-
+const firebaseDb = fireDb.database().ref()
 const [data, setData]=useState({});
 
 useEffect(() =>{
@@ -19,6 +19,8 @@ useEffect(() =>{
     });
 },[]);
 
+
+
 const onDelete = (id) => {
     if(window.confirm("¿Está seguro que desea borrar este producto?")) {
         firebaseDb.child(`Productos/${id}`).remove((err) => {
@@ -30,7 +32,7 @@ const onDelete = (id) => {
 };
 
 return(
-<div className="container mt-5">
+<div className="container-fluid mt-5">
     <div className="row">
         <div className=" col-sm-6 col-md-12 col-lg-12">
            <table className="table table-boarded table-striped py-2">
@@ -52,6 +54,7 @@ return(
                             <td>{data[id].categoria}</td>
                             <td>{data[id].producto}</td>
                             <td>{data[id].precio}</td>
+                            <td>{data[id].imagen}</td>
                             <td>
                               
                                 <button className="btn text-primary"

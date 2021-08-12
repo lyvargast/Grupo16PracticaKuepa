@@ -123,3 +123,11 @@ color: #221F1f;
     text-align: left;
 }
 
+.botoningresar a{
+    background-color: #EC6E21;
+    border:#EC6E21;
+    color: #F2DDBA;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+}
