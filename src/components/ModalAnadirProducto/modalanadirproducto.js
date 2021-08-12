@@ -119,14 +119,15 @@ const handleSubmit = (e) =>{
                  
                   <div class="mb-3">
                               < input
-                                type="text"
+                                type="number"
                                 name="idproducto"
                                 className="form-control" 
                                 value={idproducto}
                                 onChange={handleInputChange}
                                 placeholder="ID" 
                                 id="identificadorCategoria" 
-                                rows="2"  
+                                rows="2" 
+                                required="required" 
                               />
                     </div>
                     <div class="mb-3">
@@ -139,6 +140,7 @@ const handleSubmit = (e) =>{
                                 placeholder="Nombre de la categoria" 
                                 id="nomcat" 
                                 rows="2"  
+                                required
                               />
                     </div>
                     <div class="mb-3">
@@ -177,7 +179,9 @@ const handleSubmit = (e) =>{
                 </div>
                     <div className="modal-footer justify-content-center">
                       <button type="submit" className="btnanadirprodu2" data-bs-dismiss="modal">Guardar</button>
+                
                     </div>
+                    //funcion on-click
              </form>
       </div>
     </div>

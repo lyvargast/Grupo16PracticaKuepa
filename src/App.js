@@ -28,7 +28,7 @@ function App() {
     <div>
 
     <Router basename={process.env.PUBLIC_URL}> 
-      <NavBar />        
+            
       
         <Switch>
               <Route exact path="/Inicio">

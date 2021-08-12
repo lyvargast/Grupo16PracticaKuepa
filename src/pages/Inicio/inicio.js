@@ -2,7 +2,7 @@ import './inicio.css'
 import React, {useState} from "react"
 import logoininicio from "./logoinicio.PNG"
 import { Dropdown,DropdownItem,DropdownMenu, DropdownToggle } from 'reactstrap'
-import {Formulario} from "./Formulario";
+
 function Inicio(){ 
 	const [dropdown, setDropdown]=useState(false);
 	const abrirCerrarDropdown=()=>{
@@ -13,10 +13,20 @@ function Inicio(){
 		setDropdown1(!dropdown1);
 	}
     
-    const[datos, setDatos]= useState({
-	})
-
-	
+	function Ingreso(){
+		let usuario=document.getElementById("usuario").value
+		let contra=document.getElementById("contra").value
+		console.log(usuario)
+		console.log(contra)
+	  
+		if (usuario==="user123" && contra==="12345"){
+			alert("Bienvenido")
+		}
+			
+		else{
+			alert("Los Datos ingresados son incorrectos")
+		}
+	}
 
 	return(
 	<body className="fondoinicio">	
@@ -28,7 +38,7 @@ function Inicio(){
 			<div className="card caja "> 
 				<div className="card-body">
 					<h4 className="tituloingreso" >INGRESO ADMINISTRADOR</h4>
-					<div className="mb-2">
+				    <div className="mb-2">
 
 							<Dropdown isOpen={dropdown} toggle={abrirCerrarDropdown} className="dropprincipal">
 							<DropdownToggle caret className="dropdowncolor">
@@ -47,7 +57,10 @@ function Inicio(){
 							</DropdownMenu>
 							</Dropdown>
 					</div>
-					<div className="mb-2">
+
+
+
+                    <div className="mb-2">
 							<Dropdown isOpen={dropdown1} toggle={abrirCerrarDropdown1} className="dropprincipal ">
 							<DropdownToggle caret className="dropdowncolor">
 							<i class="fas fa-landmark"></i> SEDE
@@ -62,17 +75,31 @@ function Inicio(){
 								
 							</DropdownMenu>
 							</Dropdown>
-					</div> 
+					 </div> 
+				
 					<div class="input-group mb-2 usuarioinput">
 						<span className="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
-						<input type="text" className="form-control" placeholder="USUARIO"  aria-describedby="basic-addon1" />
+						<input 
+						    type="text" 
+							className="form-control" 
+							placeholder="USUARIO"  
+							id="usuario"
+							aria-describedby="basic-addon1" />
                     </div> 
 					<div class="input-group mb-2 usuarioinput">
 						<span className="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
-						<input type="password" className="form-control" placeholder="CONTRASEÑA"  aria-describedby="basic-addon1" />
+						<input 
+						  type="password" 
+						  className="form-control" 
+						  placeholder="CONTRASEÑA"
+						  id="contra"  
+						  aria-describedby="basic-addon1" />
                     </div> 
 					<div class="d-grid gap-3 col-12 mx-auto botoningresar">
-						<button class="btn btn-primary" type="submit">INGRESAR</button>
+					<a href={`/seleccionarmesa`}>
+						<button class="btn btn-primary" type="submit" onClick={Ingreso}	  
+						>INGRESAR</button>
+					</a>
 					</div>       
 				</div>
 			</div>

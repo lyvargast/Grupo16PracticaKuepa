@@ -32,7 +32,7 @@ const onDelete = (id) => {
 };
 
 return(
-<div className="container mt-5">
+<div className="container-fluid mt-5">
     <div className="row">
         <div className=" col-sm-6 col-md-12 col-lg-12">
            <table className="table table-boarded table-striped py-2">
