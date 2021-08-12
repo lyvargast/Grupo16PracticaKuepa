@@ -2,10 +2,10 @@ import React from 'react';
 import hamburguesa from './bars.png'
 import equis from './equis.png'
 import cubiertos from './cubiertos.png'
-import bell from '.bell.png'
-import editar from 'editar.png'
-import configuracion from 'config.png'
-import cerrar from 'cerrar.png'
+import bell from './bell.png'
+import editar from './editar.png'
+import configuracion from './config.png'
+import cerrar from './cerrar.png'
 export const SidebarData = [
     {
         titulo:'TOMAR PEDIDO',
