@@ -24,6 +24,7 @@ function BodyMesas(){
                     <div className="row text-center">
                             <div className="col-6 col-md-3 col-lg-3 cajasmesas">
                                 <a href={`/menu`}>
+
                                     <img src={table1} alt="Foto número" className="table"/>
                                 </a>
                             </div>
