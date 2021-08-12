@@ -1,9 +1,13 @@
 import './configuracion.css';
 import Footer from '../../components/Footer/footer'
+import  NavBar  from '../../components/NavBar/navbar'
 function Configuracion(){
 	return(
+    
 	<div className="container-fluid">
+        <NavBar />
         <div >
+            
             <div className="text-center mt-5">
                 <h1 className="tituloconfi"><i className="fas fa-cogs"></i> CONFIGURACIÓN</h1>
             </div>

@@ -21,8 +21,8 @@ function NavBar(){
                     </Link>
                 </div>
                    <nav className={sidebar ? 'nav-menu-active' : 'nav-menu'}>
-                        <ul className='nav-menu-items'>
-                            <li className="navbar-toggle ">
+                        <ul className='nav-menu-items '>
+                            <li className="navbar-toggle py-3">
                                 <Link to="#" className="menu-bars">
                                 <img src={equis}/>
                                 </Link>
@@ -34,6 +34,7 @@ function NavBar(){
                                         <Link to={item.path}>
                                             {item.img}
                                             <span>{item.titulo}</span>
+                                            <hr />
                                         </Link>
                                     </li>
                                 )
