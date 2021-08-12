@@ -33,7 +33,7 @@ function NavBar(){
                                     <li key={index} className={item.cName}>
                                         <Link to={item.path}>
                                             {item.img}
-                                            <span>{item.titulo}</span>
+                                            <span className="span1">{item.titulo}</span>
                                         </Link>
                                     </li>
                                 )
