@@ -30,13 +30,13 @@ function NavBar(){
                             </li>
                             {SidebarData.map((item, index) => {
                                 return(
-                                   
                                     <li key={index} className={item.cName}>
                                         {item.foto}
                                         <Link to={item.path}>
                                             {item.img}
                                             <span className="span1">{item.titulo}</span>
                                         </Link>
+                                        {item.fotito}
                                     </li>
                                 )
                             })}
