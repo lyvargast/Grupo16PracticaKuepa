@@ -8,6 +8,9 @@ import configuracion from './config.png'
 import cerrar from './cerrar.png'
 export const SidebarData = [
     {
+        foto:<img src={cubiertos}/>
+    },
+    {
         titulo:'TOMAR PEDIDO',
         path:'/seleccionarmesa',
         img:<img src={cubiertos}/>,

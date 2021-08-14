@@ -27,17 +27,17 @@ function BodyMesas(){
                                 </a>
                             </div>
                             <div className="col-6 col-md-3 col-lg-3 cajasmesas">
-                                <a href="#">
+                                <a href={`/menu`}>
                                     <img src={table2} alt="Foto número" className="table"/>
                                 </a>
                             </div>
                             <div className="col-6 col-md-3 col-lg-3 cajasmesas">
-                                <a href="#">
+                                <a href={`/menu`}>
                                 <img src={table3} alt="Foto número" className="table"/>
                                 </a>	
                             </div>
                             <div className="col-6 col-md-3 col-lg-3 cajasmesas">
-                                <a href="#">
+                                <a href={`/menu`}>
                                 <img src={table4} alt="Foto número" className="table"/>
                                 </a> 
                             </div>
@@ -46,22 +46,22 @@ function BodyMesas(){
                 
                         <div className="row text-center">
                             <div className=" col-6 col-md-3 col-lg-3 cajasmesas">
-                                <a href="#">
+                                <a href={`/menu`}>
                                     <img src={table5} alt="Foto número" className="table"/>
                                 </a>
                             </div>
                             <div className="col-6 col-md-3 col-lg-3 cajasmesas">
-                                <a href="#">
+                                <a href={`/menu`}>
                                     <img src={table6} alt="Foto número" className="table"/>
                                 </a>
                             </div>
                             <div className="col-6 col-md-3 col-lg-3 cajasmesas">
-                                <a href="#">
+                                <a href={`/menu`}>
                                     <img src={table7} alt="Foto número" className="table"/>
                                 </a>	
                             </div>
                             <div className="col-6 col-md-3 col-lg-3 cajasmesas">
-                                <a href="#">
+                                <a href={`/menu`}>
                                 <img src={table8} alt="Foto número" className="table"/>
                                 </a> 
                             </div>

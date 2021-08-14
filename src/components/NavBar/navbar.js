@@ -22,15 +22,17 @@ function NavBar(){
                 </div>
                    <nav className={sidebar ? 'nav-menu-active' : 'nav-menu'}>
                         <ul className='nav-menu-items'>
-                            <li className="navbar-toggle ">
+                            <li className="navbar-toggle py-3">
                                 <Link to="#" className="menu-bars">
-                                <img src={equis}/>
+                                <img src={equis} onClick={showSidebar}/>
                                 </Link>
 
                             </li>
                             {SidebarData.map((item, index) => {
                                 return(
+                                   
                                     <li key={index} className={item.cName}>
+                                        {item.foto}
                                         <Link to={item.path}>
                                             {item.img}
                                             <span className="span1">{item.titulo}</span>

@@ -22,10 +22,11 @@ import {
 } from "react-router-dom";
 
 
-function App() {
+function App() { 
+
   return (
     <div>
-
+  
     <Router basename={process.env.PUBLIC_URL}> 
       <NavBar />        
       
