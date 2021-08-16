@@ -34,8 +34,8 @@ const onDelete = (id) => {
 return(
 <div className="container-fluid mt-5">
     <div className="row">
-        <div className=" col-sm-6 col-md-12 col-lg-12">
-           <table className="table table-boarded table-striped py-2">
+        <div className=" col-sm-12 col-md-12 col-lg-12">
+           <table className="table table-boarded table-striped py-2" id="tablaestilos">
               <thead className="thead-dark">
                   <tr className="colortitulotabla">
                       <th className="ms-2">ID PRODUCTO</th>
@@ -54,7 +54,7 @@ return(
                             <td>{data[id].categoria}</td>
                             <td>{data[id].producto}</td>
                             <td>{data[id].precio}</td>
-                            <td>{data[id].imagen}</td>
+                            <td><img src={data[id].image} alt="imagen producto" className="imagentabla"/></td>
                             <td>
                               
                                 <button className="btn text-primary"

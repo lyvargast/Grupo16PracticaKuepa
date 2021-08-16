@@ -1,30 +1,39 @@
-import './inicio.css'
-import React, {useState} from "react"
-import logoininicio from "./logoinicio.PNG"
-import { Dropdown,DropdownItem,DropdownMenu, DropdownToggle } from 'reactstrap'
+import './inicio.css';
+import logoininicio from "./logoinicio.PNG";
+import swal from 'sweetalert2';
 
 function Inicio(){ 
-	const [dropdown, setDropdown]=useState(false);
-	const abrirCerrarDropdown=()=>{
-		setDropdown(!dropdown);
-	}
-	const [dropdown1, setDropdown1]=useState(false);
-	const abrirCerrarDropdown1=()=>{
-		setDropdown1(!dropdown1);
-	}
-    
+
+	
+	
 	function Ingreso(){
 		let usuario=document.getElementById("usuario").value
 		let contra=document.getElementById("contra").value
+		
+		
+		
 		console.log(usuario)
 		console.log(contra)
 	  
 		if (usuario==="user123" && contra==="12345"){
-			alert("Bienvenido")
+			swal.fire({
+				icon: 'success',
+				title: 'Bienvenido',
+				titleColor: 'blue',
+				confirmButtonColor: '#EC6E21',
+				cancelButtonColor: '#CB262A',
+			  })
+			window.location.replace('/seleccionarmesa')
 		}
 			
 		else{
-			alert("Los Datos ingresados son incorrectos")
+			
+			swal.fire({
+				icon: 'error',
+				title: 'Oops...',
+				titleColor: '#451a11',
+				text: 'Los Datos ingresados son incorrectos'
+			  })
 		}
 	}
 
@@ -39,43 +48,33 @@ function Inicio(){
 				<div className="card-body">
 					<h4 className="tituloingreso" >INGRESO ADMINISTRADOR</h4>
 				    <div className="mb-2">
-
-							<Dropdown isOpen={dropdown} toggle={abrirCerrarDropdown} className="dropprincipal">
-							<DropdownToggle caret className="dropdowncolor">
-							<i className="fas fa-map-marker-alt claseiconociu"></i> CIUDAD 
-							</DropdownToggle>
-							<DropdownMenu left className="fondodrop">
-								<DropdownItem className="itemdropdown">Bogotá</DropdownItem>
-								<DropdownItem className="itemdropdown">Medellín </DropdownItem>
-								<DropdownItem className="itemdropdown">Cali</DropdownItem>
-								<DropdownItem className="itemdropdown">Armenia</DropdownItem>
-								<DropdownItem className="itemdropdown">Popayan</DropdownItem>
-								<DropdownItem className="itemdropdown">Tulúa</DropdownItem>
-								<DropdownItem className="itemdropdown">Palmira</DropdownItem>
-								<DropdownItem className="itemdropdown">Villaviencio</DropdownItem>
-								<DropdownItem className="itemdropdown">Cartago</DropdownItem>
-							</DropdownMenu>
-							</Dropdown>
+					  <select class="form-select form-select-lg  dropdowncolor" aria-label=".form-select-lg example" id="ciudad">		  
+						<option selected>CIUDAD</option>
+						<option value="1">Bogotá</option>
+						<option value="2">Medellín</option>
+						<option value="3">Cali</option>
+						<option value="4">Popayan</option>
+						<option value="5">Tulúa</option>
+						<option value="6">Palmira</option>
+                        <option value="7">Villavicencio</option>
+						<option value="8">Cartago</option>
+					  </select>
+						
 					</div>
 
 
 
                     <div className="mb-2">
-							<Dropdown isOpen={dropdown1} toggle={abrirCerrarDropdown1} className="dropprincipal ">
-							<DropdownToggle caret className="dropdowncolor">
-							<i class="fas fa-landmark"></i> SEDE
-							</DropdownToggle>
-							<DropdownMenu className="fondodrop">
-							<DropdownItem className="itemdropdown">Parque La Colina</DropdownItem>
-							<DropdownItem className="itemdropdown">Bazar Chia</DropdownItem>
-							<DropdownItem className="itemdropdown">Gran Estación </DropdownItem>
-							<DropdownItem className="itemdropdown">Calima</DropdownItem>
-							<DropdownItem className="itemdropdown">Aeropuerto</DropdownItem>
-							<DropdownItem className="itemdropdown">Zuca Plaza</DropdownItem>
-								
-							</DropdownMenu>
-							</Dropdown>
-					 </div> 
+					<select class="form-select form-select-lg dropdowncolor" aria-label=".form-select-lg example" id="restaurante">		  
+						<option selected className="seleccionado">SEDE</option>
+						<option value="1">Parque la Colina</option>
+						<option value="2">Bazar Chia</option>
+						<option value="3">Gran Estación </option>
+						<option value="4">Calima</option>
+						<option value="5">Aeropuerto</option>
+						<option value="6">Zuca Plaza</option>
+					  </select>
+					</div> 
 				
 					<div class="input-group mb-2 usuarioinput">
 						<span className="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
@@ -96,10 +95,10 @@ function Inicio(){
 						  aria-describedby="basic-addon1" />
                     </div> 
 					<div class="d-grid gap-3 col-12 mx-auto botoningresar">
-					<a href={`/seleccionarmesa`}>
+					
 						<button class="btn btn-primary" type="submit" onClick={Ingreso}	  
 						>INGRESAR</button>
-					</a>
+					
 					</div>       
 				</div>
 			</div>
