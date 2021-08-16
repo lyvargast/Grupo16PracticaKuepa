@@ -9,7 +9,7 @@ import Configuracion from './pages/Configuracion/configuracion';
 import Perfil from './pages/Perfil/perfil';
 import Error404 from './pages/Error404/error404';
 import CarritoCompras from "./components/CarritoCompras/carritocompras";
-import NavBar from "./components/NavBar/navbar";
+
 
 import Res from '../src/components/BodyProductos/res/res'
 
@@ -28,7 +28,7 @@ function App() {
     <div>
   
     <Router basename={process.env.PUBLIC_URL}> 
-      <NavBar />        
+             
       
         <Switch>
               <Route exact path="/Inicio">

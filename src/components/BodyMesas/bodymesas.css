@@ -4,28 +4,38 @@
     background-size: cover;
     width: 100vw;
     height: 100vh;
+    
 }
 .table{
     width: 120px;
 }
 .titulo{
     top: 20px;
+    font-size: 60px;
+    text-align: center;
+    
+}
+.contenedordelostres{
+    display: flex;
+    flex-direction: row;
+}
+.fotoplanta1{
+    max-width: 60px;
+    width: 100%;
+    max-height: 60px;
+    height: 100%;   
+}
+.fotoplanta2{
+    max-width: 60px;
+    width: 100%;
+    max-height: 60px;
+    height: 100%;
+
 }
 
 .cajasmesas{
     margin:auto;
     margin-top: 30px;
 }
-/*.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    padding: 20px;
-  }*/
-  .fotoplanta{
-      max-width: 80px;
-      width: 100%;
-      max-height: 80px;
-      height: 100%;
-  }
- 
+
+

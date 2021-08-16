@@ -1,9 +1,11 @@
 import './perfil.css';
 import Footer from '../../components/Footer/footer'
 import imgperfil from './fotoperfil.png'
+import NavBar from '../../components/NavBar/navbar';
 function Perfil(){
 	return(
 	<div className="container-fluid">
+    <NavBar />
         <div className="row">
             <div className="col-lg-12 col-md-12 col-sm-12 text-center mt-5">
                <h1 className="tituloconfi"> <i class="fas fa-user"></i> PERFIL</h1>
@@ -57,7 +59,7 @@ function Perfil(){
         </div>
 
 
-        <Footer />	
+        
 	</div>
 		);
 }

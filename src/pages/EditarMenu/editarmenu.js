@@ -1,10 +1,12 @@
 import './editarmenu.css';
 import BotonAnadirProducto from '../../components/BotonAnadirProducto/botonanadirproducto';
 import TablaProductos from '../../components/TablaProductos/tablaproductos';
+import NavBar from '../../components/NavBar/navbar'
 
 function Editarmenu() {
     return(
       <div className="container-fluid fondoeditar">
+         <NavBar/>
          <div className="text-center  cajaeditarmenu">
             
              <div className="tituloedi" > 

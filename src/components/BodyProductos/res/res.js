@@ -7,6 +7,7 @@ import puntadeanca from './puntadeancanobg.png'
 import bifedechorizo from './bifechorizonobg.png'
 import lomitoensalsa from './lomitoensalsanobg.png'
 import { useParams } from 'react-router-dom';
+import NavBarCarrito from '../../NavBar/navbarcarrito';
 //Estado de res con lista de res
 function Res(){
 
@@ -52,6 +53,7 @@ const [arreglores, setRes] = useState([
     console.log(categoria)
 	return (
 		<div className="container-fluid overflow-hidden fondoproductos">
+            <NavBarCarrito />
             <div className="row">
                 <div className="col-12 col-md-12 col-lg-12 letraproductos text-center">
                     <h1>{categoria}</h1>
