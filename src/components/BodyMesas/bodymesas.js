@@ -7,6 +7,7 @@ import table5 from './table5.png';
 import table6 from './table6.png';
 import table7 from './table7.png';
 import table8 from './table8.png';
+
 import NavBar from '../NavBar/navbar';
 function BodyMesas(){
 	return (
@@ -20,7 +21,7 @@ function BodyMesas(){
                     <div className="row text-center">
                             <div className="col-6 col-md-3 col-lg-3 cajasmesas">
                                 <a href={`/menu`}>
-                            
+
                                     <img src={table1} alt="Foto número" className="table"/>
                                 </a>
                             </div>
@@ -36,7 +37,9 @@ function BodyMesas(){
                             </div>
                             <div className="col-6 col-md-3 col-lg-3 cajasmesas">
                                 <a href={`/menu`}>
+                                
                                  <img src={table4} alt="Foto número" className="table"/>
+
                                 </a> 
                             </div>
                         </div>

@@ -40,11 +40,12 @@ const handleUpdateImage = (event) =>{
     },
     async () => {
       await storage
-          .ref(`/Producto/${initialState.producto}`)
+          .ref(`/Productos/${initialState.producto}`)
           .child(file?.name)
           .getDownloadURL()
           .then(url => {
             setImage(url)
+            console.log(image)
            // setUpload(false)
           });
   })
@@ -83,17 +84,19 @@ const handleInputChange = (e) => {
 const handleSubmit = (e) =>{
   e.preventDefault();
   if (isEmpty(id)) {
-  firebaseDb.child("Productos").push(initialState, (err) => {
+  firebaseDb.child("Productos").push({...initialState, image}, (err) => {
     if(err) {
       console.log(err);
     }
+    setImage('')
   }); 
 } else {
-    firebaseDb.child(`/Productos/${id}`).set(initialState, (err) => {
+    firebaseDb.child(`/Productos/${id}`).set({...initialState, image}, (err) => {
       if(err) {
         console.log(err);
       }
       localStorage.clear()
+      setImage('')
     });
   }
   
@@ -181,7 +184,7 @@ const handleSubmit = (e) =>{
                       <button type="submit" className="btnanadirprodu2" data-bs-dismiss="modal">Guardar</button>
                 
                     </div>
-                    //funcion on-click
+                
              </form>
       </div>
     </div>

@@ -10,3 +10,23 @@ table th{
 table{
     margin: 0;
 }
+
+.imagentabla{
+    width: 60px;
+}
+
+#tablaestilos{
+    width: 82vw;
+}
+
+.fa-pencil-alt{
+    color: #355D06;
+    
+}
+.fa-trash-alt{
+  color: #DF421D;
+}
+
+.fa-eye{
+    color:#451A11;
+}
