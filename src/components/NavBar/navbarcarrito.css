@@ -1,47 +1,46 @@
 .navbar{
     background-color: #f2ddba;
-    height: 70px;
+    height: 90px;
     display: flex;
-   
     align-items:center;
-    
+    flex-direction: row;
 }
+
 .menu-bars{
     margin-left:2rem;
     font-size: 1rem;
     background: none;
-    justify-content: start;
+    justify-content: space-between;
 }
-.navbarmuñecos{
-    justify-content:end;
-    padding:20px;   
-    
-}
-.menu-user{
+.hamburguesa{
     margin:20px;
-    text-decoration: none;
-}
-.menu-user img{
-    width: 30px;
-    height: 30px;
-}
-.menu-user p{
-    color: white;
-    font-size: 18px;
+    padding-right: 30px;
 }
 
-.menu-cerrar{
-    margin:20px;
+.navbarmunecos{
+    justify-content: space-between;
+    margin-right: 2rem;
+}
+.volveralmenu{
     text-decoration: none;
+    padding-right: 30px;
+
 }
-.menu-cerrar img{
-    width: 30px;
-    height: 30px;
+
+
+.volveralmenu p{
+    color: #EC6E21;
+    text-decoration: none;
+    font-weight: bold;
+
 }
-.menu-cerrar p{
-    color: white;
-    font-size: 18px;
-}
+
+
+
+
+
+
+
 
 
 .nav-menu{

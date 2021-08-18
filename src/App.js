@@ -10,7 +10,7 @@ import Perfil from './pages/Perfil/perfil';
 import Error404 from './pages/Error404/error404';
 import View from "./components/ModalAnadirProducto/view";
 import CarritoCompras from "./components/CarritoCompras/carritocompras";
-import NavBar from "./components/NavBar/navbar";
+
 
 import Res from '../src/components/BodyProductos/res/res'
 
@@ -23,13 +23,12 @@ import {
 } from "react-router-dom";
 
 
-function App() {
+function App() { 
+
   return (
     <div>
-
-    <Router basename={process.env.PUBLIC_URL}> 
-            
-      
+  
+    <Router basename={process.env.PUBLIC_URL}>       
         <Switch>
               <Route exact path="/Inicio">
                 <Inicio />

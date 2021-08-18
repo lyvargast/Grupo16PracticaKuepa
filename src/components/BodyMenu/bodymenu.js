@@ -16,6 +16,7 @@ import bebidasalcoholicas from './imagenesmenu/alcohol.PNG'
 import bonosregalo from './imagenesmenu/bonos.PNG'
 import postres from './imagenesmenu/postres.PNG'
 import acompanamientos from './imagenesmenu/Acompañamientos.PNG'
+import NavBar from '../NavBar/navbar';
 import { useState } from 'react';
 
 
@@ -102,6 +103,7 @@ function BodyMenu(){
 	
     return (
 		<div className="container-fluid overflow-hidden fondobodymenu">
+            <NavBar/>
             <div className="row cajatitulomenu">
                 <div className="col-12 col-md-3 col-lg-4 steak">
                     <img src={steak} alt="ícono steak"/>
