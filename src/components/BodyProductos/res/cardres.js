@@ -1,6 +1,7 @@
+import { CardText } from 'reactstrap';
 import './bodyproductosres.css'
 
-function CardRes(props){
+function CardRes(props, cart, setCart){
 	return (
 
             <div className="card tarjetares mb-5" >
@@ -9,7 +10,7 @@ function CardRes(props){
                     <h3 className="card-title">{props.title}</h3>
                     <p className="precio">{props.price}</p>
                     <div className="cajabotones">
-                        <a href="#" className="naranja">Agregrar +</a>
+                        <a href="#" className="naranja">Agregar +</a>
                         <a href="#" className="beige">Remover -</a>
                     </div>
                 </div>
