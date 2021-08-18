@@ -1,22 +1,55 @@
 import './modalanadirproducto.css';
-import React, {useState,useEffect} from 'react';
-import  firebaseDb from "../../firebase"
+import React, {useState,useEffect, Component} from 'react';
+import  firebase,{fireDb, storage} from "../../firebase"
 import {useHistory, useParams} from 'react-router-dom';
-import {isEmpty} from "lodash"; 
+import {isEmpty} from "lodash";
+ 
+
 function ModalAnadirProducto(){
 	const values ={
       idproducto:"",
       categoria:"",
       producto:"",
       precio:"",
+      imagen:"",
   };
+
+const firebaseDb = fireDb.database().ref()
 const [data, setData]=useState({});
 const [initialState, setState] = useState(values);
-const {idproducto,categoria,producto,precio}=initialState;
+const {idproducto,categoria,producto,precio,imagen}=initialState;
 
 const history = useHistory();
 
 const  id  = localStorage.getItem("id");
+
+const [image,setImage] = useState();
+
+const handleUpdateImage = (event) =>{
+  const file = event.target.files && event.target.files[0]
+  const task = firebase.storage().ref(`/Productos/${initialState.producto}/${file?.name}`).put(file)
+
+  task.on(
+    'state-change',
+    snapshot => {
+     // setProgress((snapshot.bytesTransferred / snapshot.totalBytes) * 100)
+      //setUpload(true)
+    },
+    error => {
+      console.log(error.message)
+    },
+    async () => {
+      await storage
+          .ref(`/Producto/${initialState.producto}`)
+          .child(file?.name)
+          .getDownloadURL()
+          .then(url => {
+            setImage(url)
+           // setUpload(false)
+          });
+  })
+}
+
 
 useEffect(() =>{
   firebaseDb.child("Productos").on("value",(snapshot) =>{
@@ -29,6 +62,7 @@ useEffect(() =>{
       }
   });
 },[id]);
+
 //editar//
 useEffect(() =>{
 if(isEmpty(id)){
@@ -50,7 +84,7 @@ const handleSubmit = (e) =>{
   e.preventDefault();
   if (isEmpty(id)) {
   firebaseDb.child("Productos").push(initialState, (err) => {
-    if(err){
+    if(err) {
       console.log(err);
     }
   }); 
@@ -66,6 +100,7 @@ const handleSubmit = (e) =>{
   
   history.push("/editarmenu");
 };
+
 
   return(
     <div className="modal fade" id="ModalAnadirProducto" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -84,14 +119,15 @@ const handleSubmit = (e) =>{
                  
                   <div class="mb-3">
                               < input
-                                type="text"
+                                type="number"
                                 name="idproducto"
                                 className="form-control" 
                                 value={idproducto}
                                 onChange={handleInputChange}
                                 placeholder="ID" 
                                 id="identificadorCategoria" 
-                                rows="2"  
+                                rows="2" 
+                                required="required" 
                               />
                     </div>
                     <div class="mb-3">
@@ -104,6 +140,7 @@ const handleSubmit = (e) =>{
                                 placeholder="Nombre de la categoria" 
                                 id="nomcat" 
                                 rows="2"  
+                                required
                               />
                     </div>
                     <div class="mb-3">
@@ -131,16 +168,20 @@ const handleSubmit = (e) =>{
                               />
                     </div>
                     <div className="mb-3">
+                               <img  src={image} alt="Imagén de producto"/>
                                <input className="form-control" 
                                     type="file" 
                                     id="formFile"
-                                    
+                                    value={imagen}
+                                    onChange={handleUpdateImage}
                                 /> <label>Añadir Imagen</label>    
                     </div>
                 </div>
                     <div className="modal-footer justify-content-center">
                       <button type="submit" className="btnanadirprodu2" data-bs-dismiss="modal">Guardar</button>
+                
                     </div>
+                    //funcion on-click
              </form>
       </div>
     </div>
