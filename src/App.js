@@ -8,6 +8,7 @@ import EditarMenu from './pages/EditarMenu/editarmenu';
 import Configuracion from './pages/Configuracion/configuracion';
 import Perfil from './pages/Perfil/perfil';
 import Error404 from './pages/Error404/error404';
+import View from "./components/ModalAnadirProducto/view";
 import CarritoCompras from "./components/CarritoCompras/carritocompras";
 
 
@@ -27,9 +28,7 @@ function App() {
   return (
     <div>
   
-    <Router basename={process.env.PUBLIC_URL}> 
-             
-      
+    <Router basename={process.env.PUBLIC_URL}>       
         <Switch>
               <Route exact path="/Inicio">
                 <Inicio />
@@ -57,6 +56,9 @@ function App() {
               </Route>
               <Route exact path="/perfil">
                 <Perfil />
+              </Route>
+              <Route exact path="/view/:id" component={View}>
+                <View />
               </Route>
 
               <Route exact path="/menu/:categoria">

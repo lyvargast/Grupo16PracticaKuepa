@@ -7,3 +7,6 @@ table th{
     width: 6rem;
 }
 
+table{
+    margin: 0;
+}

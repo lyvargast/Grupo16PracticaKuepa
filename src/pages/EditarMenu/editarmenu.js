@@ -16,11 +16,8 @@ function Editarmenu() {
                  
             </div>
 
-            <div className="container-fluid">
+            <div className="container">
              < BotonAnadirProducto />
-            </div>
-
-            <div className="container ladolado">
                <TablaProductos />
             </div>
            
