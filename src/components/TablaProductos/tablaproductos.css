@@ -18,3 +18,15 @@ table{
 #tablaestilos{
     width: 82vw;
 }
+
+.fa-pencil-alt{
+    color: #355D06;
+    
+}
+.fa-trash-alt{
+  color: #DF421D;
+}
+
+.fa-eye{
+    color:#451A11;
+}

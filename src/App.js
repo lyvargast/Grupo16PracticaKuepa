@@ -58,9 +58,7 @@ function App() {
               <Route exact path="/perfil">
                 <Perfil />
               </Route>
-              <Route exact path="/view/:id" component={View}>
-                <View />
-              </Route>
+              
 
               <Route exact path="/menu/:categoria">
                 <Res />

@@ -1,7 +1,8 @@
 import './tablaproductos.css';
-import React,{useState, useEffect, Component } from "react";
+import React,{useState, useEffect } from "react";
 import {fireDb} from '../../firebase';
 import {Link} from "react-router-dom";
+import Modalview from '../ModalAnadirProducto/modalview';
 
 const TablaProductos = () =>{
 const firebaseDb = fireDb.database().ref()
@@ -70,9 +71,9 @@ return(
                                    <i class="fas fa-trash-alt"></i>
                                 </a>
                               </Link>
-                              <Link to={`/view/${id}`}>
-                                <a className="btn text-info">
-                                <i class="fas fa-eye"></i>
+                              <Link >
+                                <a className="btn text-info"  data-bs-toggle="modal" data-bs-target="#Modalview" >
+                                  <i class="fas fa-eye" ></i>
                                 </a>
                               </Link>
 
@@ -85,6 +86,7 @@ return(
         </div>
 
     </div>
+    <Modalview />
 </div>
 
 	);
