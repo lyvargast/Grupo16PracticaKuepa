@@ -57,10 +57,14 @@ function BodyHistorialPedidos(){
                                         </div>
                                         <div className="col-4 col-md-2 col-lg-4 flex-column  justify-content-between p-5">
                                             <div>
-                                                <button className="anadirproducto" >Añadir producto</button>
+                                                <a href={`/menu`}>
+                                                    <button className="anadirproducto" >Añadir producto</button>
+                                                </a>
                                             </div>
                                             <div>
-                                            <button className="eliminarproducto" >Eliminar producto</button>
+                                            <a href={`/menu/RES#`}>
+                                                <button className="eliminarproducto" >Eliminar producto</button>
+                                            </a>
                                             </div>
                                         </div>
                                     </div>
