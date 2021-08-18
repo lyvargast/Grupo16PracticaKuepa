@@ -7,11 +7,14 @@
 .fa-power-off{
     color: #F2DDBA;
     font-size: 30px;
+    margin-top: 10px;
 }
+
 .letracerrarsesion{
     color: #F2DDBA;
-
+    text-decoration: none;
 }
+
 .mesacarrito p{
     color: #B8977E;
     font-size: 18px;

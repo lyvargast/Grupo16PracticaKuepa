@@ -6,7 +6,12 @@ import bell from './bell.png'
 import editar from './editar.png'
 import configuracion from './config.png'
 import cerrar from './cerrar.png'
+import elena from './elena.png'
+import logo from './logo.png'
 export const SidebarData = [
+   {
+       foto:<img src={elena} />
+    },
     {
         titulo:'TOMAR PEDIDO',
         path:'/seleccionarmesa',
@@ -36,6 +41,9 @@ export const SidebarData = [
         path:'/',
         img:<img src={cerrar}/>,
         cName: 'nav-text'
-    }
+    },
+   {
+      fotito:<img src={logo}/>
+   }
 
 ]

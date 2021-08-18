@@ -1,6 +1,12 @@
 import './carritocompras.css'
 import logo from './LogoLenosHeader.png'
 import bbq from './bbq.png'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
 function CarritoCompras(){
 	return (
@@ -11,8 +17,10 @@ function CarritoCompras(){
                         <img src={bbq}/>
                 </div>
                  <div className="text-center col-4 col-md-3 col-lg-2">
+                     <Link to="/Inicio" className="letracerrarsesion">
                         <i className="fas fa-power-off"></i>
-                        <p className="letracerrarsesion">Cerrar sesión</p>
+                        <p>Cerrar sesión</p>
+                    </Link>
                  </div>  
                                        
             </div> 

@@ -1,4 +1,5 @@
 import './bodyproductosres.css'
+import React, { Fragment, useState } from "react";
 import CardRes from './cardres';
 import churrasco from './churrasco.png';
 import babybeef from './babybeefnobg.png'
@@ -6,9 +7,11 @@ import puntadeanca from './puntadeancanobg.png'
 import bifedechorizo from './bifechorizonobg.png'
 import lomitoensalsa from './lomitoensalsanobg.png'
 import { useParams } from 'react-router-dom';
+import NavBarCarrito from '../../NavBar/navbarcarrito';
+//Estado de res con lista de res
+function Res(){
 
-
-const arreglores=[
+const [arreglores, setRes] = useState([
     {
         id:1,
         imgs:churrasco,
@@ -40,13 +43,17 @@ const arreglores=[
         precio:'$36.900'
     },
 
-]
+])
+//ESTADO DEL CARRITO
 
-function Res(){
+
+
+    const [cart, setCart] = useState([])
     const {categoria}= useParams() 
     console.log(categoria)
 	return (
 		<div className="container-fluid overflow-hidden fondoproductos">
+            <NavBarCarrito />
             <div className="row">
                 <div className="col-12 col-md-12 col-lg-12 letraproductos text-center">
                     <h1>{categoria}</h1>
@@ -57,7 +64,14 @@ function Res(){
                     {
                         arreglores.map(rescat=>(
                             <div className="col-12 col-md-6 col-lg-4" key={rescat.id}>
-                                <CardRes imagenes={rescat.imgs} title={rescat.titulo} price={rescat.precio}/>
+                                <CardRes 
+                                imagenes={rescat.imgs} 
+                                title={rescat.titulo} 
+                                price={rescat.precio}
+                                cart={cart}
+                                setCart={setCart}
+                                arreglores={arreglores}
+                                />
                             </div>
                     ))
                     }

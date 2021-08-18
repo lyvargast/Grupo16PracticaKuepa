@@ -1,6 +1,7 @@
 import './configuracion.css';
 import Footer from '../../components/Footer/footer'
-import  NavBar  from '../../components/NavBar/navbar'
+import NavBar from '../../components/NavBar/navbar';
+
 function Configuracion(){
 	return(
     
@@ -30,7 +31,7 @@ function Configuracion(){
            
         </div>
 
-        <Footer />	
+        	
 	</div>
 		);
 }

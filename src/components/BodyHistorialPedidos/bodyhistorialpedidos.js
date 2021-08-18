@@ -1,8 +1,10 @@
+
 import './bodyhistorialpedidos.css'
 
 function BodyHistorialPedidos(){
 	return (
 		<div className="container-fluid overflow-hidden fondohistorialpedidos">
+           
 			<section>
         
 				<div className="row align-items-center">
